@@ -6,7 +6,7 @@ async function newPostHandler(event) {
   const description = document.querySelector("#bodyInput").value.trim();
 
   if (title && description) {
-    const blogPostId = 1; 
+    const blogPostId = 2; 
     const url = `/api/blogPost/${blogPostId}`;
 
     const response = await fetch(url, {
