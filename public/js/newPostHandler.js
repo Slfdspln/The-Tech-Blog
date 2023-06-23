@@ -6,7 +6,10 @@ async function newPostHandler(event) {
   const description = document.querySelector("#bodyInput").value.trim();
 
   if (title && description) {
-    const response = await fetch(`/api/blogPost/${blogPost[2]}`, {
+    const blogPostId = 1; 
+    const url = `/api/blogPost/${blogPostId}`;
+
+    const response = await fetch(url, {
       method: "POST",
       body: JSON.stringify({
         title,
@@ -26,6 +29,4 @@ async function newPostHandler(event) {
 }
 
 // Event Listener
-document
-  .querySelector(".createBlogPost")
-  .addEventListener("submit", newPostHandler);
+document.querySelector(".createBlogPost").addEventListener("submit", newPostHandler);
