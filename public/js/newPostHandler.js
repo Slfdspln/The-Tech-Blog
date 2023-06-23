@@ -6,7 +6,7 @@ async function newPostHandler(event) {
     const description = document.querySelector("#bodyInput").value.trim();
   
     if (title && description) {
-      const response = await fetch(`/api/create`, {
+      const response = await fetch(`./controllers/api/blogPostRoutes.js`, {
         method: "POST",
         body: JSON.stringify({
           title,
