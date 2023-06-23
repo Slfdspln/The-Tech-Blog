@@ -1,0 +1,18 @@
+
+<div class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 mx-auto text-left mt-5">
+                {{userId}}
+                {{#if blogPosts.length}}
+                    {{#each blogPosts as |blogPost|}}
+                        {{> dashboardPost userId=userId blogPost=blogPost}}
+                        <br>
+                    {{/each}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/dashboard.js"></script>
