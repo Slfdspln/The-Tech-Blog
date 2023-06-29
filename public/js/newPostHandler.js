@@ -7,7 +7,8 @@ async function newPostHandler(event) {
 
   if (title && description) {
     const blogPostId = 1;
-    const url = `/api/blogPost/${blogPostId}`;
+    const url = `/api/blogposts`;
+    
 
     const response = await fetch(url, {
       method: "POST",

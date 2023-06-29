@@ -1,5 +1,7 @@
-let blogPost = window.location.pathname.split("/");
+// let blogPost = window.location.pathname.split("/");
+let blogPost = window.location.pathname.split("/")[2];
 
+console.log(" blog post ", blogPost);
 // Allows user to edit blog posts from the blogPost page
 const submitEdit = async (event) => {
   event.preventDefault();
@@ -7,7 +9,7 @@ const submitEdit = async (event) => {
   const description = document.getElementById("bodyInput").value;
 
   if (title && description) {
-    const response = await fetch(`/api/blogPost/${blogPost[2]}`, {
+    const response = await fetch(`/api/blogposts/${blogPost}`, {
       method: "PUT",
       body: JSON.stringify({
         title,

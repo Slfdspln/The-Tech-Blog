@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "18.16.0"
-    },
+  },
   "description": "Week-14 Challenge (Model-View-Controller)",
   "main": "index.js",
   "scripts": {
