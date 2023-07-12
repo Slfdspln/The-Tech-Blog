@@ -7,11 +7,11 @@ async function newCommentHandler(event) {
   // get text and trim whitespace
   const comment_body = document.getElementById("comment").value.trim();
   // get post id from URL
-  const url = window.location.toString().split("/");
+  const url = window.location.toString("/")[2];
   const blogPost_id = url[url.length - 1];
 
   if (comment_body) {
-    const response = await fetch("/api/comment", {
+    const response = await fetch("/api/comments", {
       method: "POST",
       body: JSON.stringify({
         blogPost_id,

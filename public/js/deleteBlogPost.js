@@ -7,7 +7,7 @@ const deletePostHandler = async (event) => {
     let blogPost = window.location.pathname.split("/");
     console.log(blogPost);
   
-    const response = await fetch(`/api/blogPost/${blogPost[2]}`, {
+    const response = await fetch(`/api/blogposts/${blogPost[2]}`, {
       method: "DELETE",
     });
   
